@@ -1,0 +1,15 @@
+.sellPage {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.sell {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: #dddddd 0rem 0.2rem 1rem;
+    border: 1px solid #dddddd;
+    /* border-radius: 10px; */
+}

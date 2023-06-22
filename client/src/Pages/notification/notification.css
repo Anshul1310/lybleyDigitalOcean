@@ -1,0 +1,24 @@
+.notificationPage {
+    padding: 1rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    background-color: #ededed;
+    box-shadow: #dddddd 0rem 0.2rem 1rem;
+    border: 1px solid #dddddd;
+}
+
+.pushNotification {
+    display: flex;
+    align-self: center;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.pushNotification a {
+    background: #d8d8d9;
+    padding: 0.5rem 0.6rem;
+    border-radius: 50%;
+    color: #000;
+}

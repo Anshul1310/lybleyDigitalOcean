@@ -1,0 +1,47 @@
+.SellersPage,
+.AddSellerPage {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.AddSellerPage {
+    row-gap: 15px;
+}
+
+.sortAndActions {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 1rem;
+    /* border-radius: 10px; */
+}
+
+.allSellers {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: #dddddd 0rem 0.2rem 1rem;
+    border: 1px solid #dddddd;
+    /* border-radius: 10px; */
+}
+
+/* .viewUser {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 335px;
+}
+
+.editAndCloseBtn {
+    display: flex;
+    column-gap: 20px;
+}
+
+.editFields1 .viewUser input,
+.editFields1 .viewUser select,
+.editFields1 .viewUser textarea {
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+} */

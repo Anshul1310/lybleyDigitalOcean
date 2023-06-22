@@ -1,0 +1,43 @@
+.ProductsPage,
+.Addproductpage {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.inputFile{
+    display: none;
+}
+
+.Addproductpage {
+    row-gap: 15px;
+}
+
+.allProducts {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: #dddddd 0rem 0.2rem 1rem;
+    border: 1px solid #dddddd;
+    /* border-radius: 10px; */
+}
+
+table img {
+    height: 50px;
+    width: 53px;
+    border-radius: 50%;
+}
+
+.edit,
+.deleteIcon {
+    cursor: pointer;
+}
+
+.edit a {
+    color: #05b171;
+}
+
+.deleteIcon {
+    color: #c73a3a;
+}

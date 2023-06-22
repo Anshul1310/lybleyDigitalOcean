@@ -1,0 +1,167 @@
+.top {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* margin-bottom: 15px; */
+    border-bottom: 0.5px solid #f4f4f4;
+    padding: 0.5rem 0;
+
+}
+
+.menu {
+    padding: 0.8rem 1.8rem;
+    font-size: 15px;
+}
+
+.heading {
+    font-size: 20px;
+    color: #000;
+    /* font-weight: bolder; */
+}
+
+.item {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    align-items: center;
+    transition-duration: 0.2s;
+    transition-property: all;
+    background: #fff;
+    /* transition: all 0.1s linear; */
+    /* border-radius: 15px; */
+}
+
+.item a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.item:hover {
+    background-color: #e9ecfb;
+    border-right: 5px solid #444bc0;
+    cursor: pointer;
+}
+
+
+.link1[aria-current="page"] {
+    background-color: #e9ecfb;
+    border-right: 5px solid #444bc0;
+    transition: all 0.1s linear;
+}
+
+.link1[aria-current="page"] .icon,
+.link1[aria-current="page"] .spanList {
+    color: #4a4995;
+}
+
+.link1[aria-current="page"]:hover {
+    border-right: none;
+}
+
+.spanList {
+    color: #747474;
+    font-size: 16px;
+}
+
+.icon {
+    color: #747474;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.item:hover .icon,
+.item:hover .spanList {
+    color: #4a4995;
+}
+
+.Sidebar,
+.SidebarSmall {
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    flex: 1;
+    border-right: 0.5px solid rgb(230, 227, 227);
+    /* background-color: #00ffcb; */
+    position: fixed;
+    height: 625px;
+    width: 258px;
+}
+
+.SidebarSmall {
+    width: 95px;
+}
+
+.SidebarSmall .item {
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.SidebarSmall .item:hover {
+    background-color: #e9ecfb;
+    border-right: none;
+    cursor: pointer;
+}
+
+.SidebarSmall .link1[aria-current="page"] {
+    background-color: #e9ecfb;
+    border-right: none;
+    border-radius: 10px;
+    transition: all 0.1s linear;
+}
+
+.SidebarSmall .spanList {
+    display: none;
+}
+
+.SidebarSmall .heading {
+    font-size: 12px;
+}
+
+.SidebarSmall .item a {
+    padding: 10px 0px 10px 0px;
+    width: 50%;
+}
+
+.bottom {
+    display: flex;
+    margin-top: 20px;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+.item svg {
+    height: 1.1em;
+    width: 1.1em;
+}
+
+.center ul {
+    padding: 0 1rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

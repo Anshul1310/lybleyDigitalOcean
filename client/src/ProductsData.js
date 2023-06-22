@@ -1,0 +1,111 @@
+const ProductsData = [
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 Feb 2022",
+        category: 'Perfume'
+    },
+    {
+        id: 978787,
+        image: 'https://cdn.w600.comps.canstockphoto.com/jar-of-perfume-icon-simple-style-stock-illustrations_csp47888374.jpg',
+        title: 'Perfume',
+        measuringUnit: 'ml',
+        stock: 3446,
+        price: 5674,
+        seller: 'XYZ',
+        store: 'JBM Mall',
+        createdAt: "27 / 08 / 2022",
+        category: 'Perfume'
+    },
+]
+export default ProductsData

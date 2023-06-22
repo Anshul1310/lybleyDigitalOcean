@@ -1,0 +1,71 @@
+.UsersPage {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.sortAndActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 1rem;
+    /* border-radius: 10px; */
+}
+
+.allUsers {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: #dddddd 0rem 0.2rem 1rem;
+    border: 1px solid #dddddd;
+    /* border-radius: 10px; */
+}
+
+.viewUser {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 335px;
+}
+
+.editAndCloseBtn {
+    display: flex;
+    column-gap: 20px;
+}
+
+.editFields1 .viewUser input,
+.editFields1 .viewUser select,
+.editFields1 .viewUser textarea {
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+}
+
+#sorting {
+    height: 35px;
+    background: #fff;
+    height: 35px;
+    width: 105px;
+    border-radius: 10px;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    outline: none;
+    cursor: pointer;
+}
+
+#sorting option {
+    background-color: #fff;
+    color: #0d6efd;
+}
+
+.arrowBack {
+    background: #cfcfcf;
+    border-radius: 50%;
+    padding: 3px;
+    color: #fff;
+}
+
+.arrowBack:hover {
+    color: #0d6efd;
+}

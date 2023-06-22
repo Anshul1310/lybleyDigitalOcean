@@ -1,0 +1,73 @@
+const OrdersData = [
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+    {
+        orderId: '94845',
+        buyer: 'cortie gemson',
+        date: '03/09/2022',
+        status: 'dispatched',
+        totalPrice: '9860',
+    },
+]
+export default OrdersData

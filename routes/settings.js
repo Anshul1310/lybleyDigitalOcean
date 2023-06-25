@@ -24,6 +24,7 @@ router.post("/index/create",async (req, res)=>{
 		adminIndex:1,
 		sellerIndex:1,
 	})
+	res.status(400).json("donw")
 
 })
 

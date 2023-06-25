@@ -8,7 +8,12 @@ const Jimp=require("jimp");
 const path=require("path");
 
 router.post("/index/create",async (req, res)=>{
-	const settings=await Settings.create({})
+	await Settings.updateOne({
+		buyerIndex:number+1,
+		orderIndex:1,
+adminIndex:1,
+sellerIndex:1,
+	})
 
 })
 

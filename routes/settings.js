@@ -7,12 +7,22 @@ const Seller=require("../models/Seller");
 const Jimp=require("jimp");
 const path=require("path");
 
+router.get("/all",async (req,res)=>{
+	try{
+		const buyer=await Settings.find().sort({"_id":-1});;
+		res.status(200).json(buyer);
+	}catch(er){
+		res.status(401).json({msg:"Something went wrong"})
+		console.log(er);
+	}
+})
+
 router.post("/index/create",async (req, res)=>{
 	await Settings.updateOne({
 		buyerIndex:number+1,
 		orderIndex:1,
-adminIndex:1,
-sellerIndex:1,
+		adminIndex:1,
+		sellerIndex:1,
 	})
 
 })

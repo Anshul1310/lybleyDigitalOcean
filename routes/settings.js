@@ -17,9 +17,9 @@ router.get("/all",async (req,res)=>{
 	}
 })
 
-router.post("/index/create",async (req, res)=>{
+router.post("/new",async (req, res)=>{
 	await Settings.updateOne({
-		buyerIndex:number+1,
+		buyerIndex:1,
 		orderIndex:1,
 		adminIndex:1,
 		sellerIndex:1,

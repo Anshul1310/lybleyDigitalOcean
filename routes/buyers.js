@@ -90,7 +90,7 @@ router.post("/updateBusinessInfo",async (req,res)=>{
 			new: true,
 			setDefaultsOnInsert: true
 	};
-		const {dob, gender, name,type, sales,id}=req.body;
+		const {dob, gender, name,type,address, sales,id}=req.body;
 		const buyer=await Buyer.findByIdAndUpdate({_id:id},{
 			"$set":{
 				type, sales, address
@@ -111,7 +111,7 @@ router.post("/updateProfileInfo",async (req,res)=>{
 			new: true,
 			setDefaultsOnInsert: true
 	};
-		const {dob, gender, name,type, sales,id}=req.body;
+		const {dob, gender, name,type, sales,phone, id}=req.body;
 		const buyer=await Buyer.findByIdAndUpdate({_id:id},{
 			"$set":{
 				dob, gender, name, phone

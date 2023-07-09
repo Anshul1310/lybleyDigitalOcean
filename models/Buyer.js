@@ -23,6 +23,10 @@ const schema=mongoose.Schema({
 		type:String,
 		default:"pending"
 	},
+	profile:{
+		type:String,
+		default:""
+	},
 	_id:String,
 	additional_number:Number,
 	type:String,

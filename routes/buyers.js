@@ -149,7 +149,9 @@ router.post("/updateProfileImage",async (req,res)=>{
 					profile:avatar
 				}
 			});
-			res.status(200).json(buyer);
+			const buyerNew=await Buyer.findOne({_id:id});
+
+			res.status(200).json(buyerNew);
 	}catch(e){
 		console.log(e)
 	}

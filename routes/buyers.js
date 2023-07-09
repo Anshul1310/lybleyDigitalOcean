@@ -148,7 +148,7 @@ router.post("/updateProfileImage",async (req,res)=>{
 				"$set":{
 					profile:avatar
 				}
-			}, options);
+			});
 			res.status(200).json(buyer);
 	}catch(e){
 		console.log(e)

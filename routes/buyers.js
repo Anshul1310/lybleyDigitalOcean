@@ -93,7 +93,7 @@ router.post("/updateBusinessInfo",async (req,res)=>{
 		const {dob, gender, name,type, sales,id}=req.body;
 		const buyer=await Buyer.findByIdAndUpdate({_id:id},{
 			"$set":{
-				type, sales
+				type, sales, address
 			}
 		}, options);
 		res.status(200).json(buyer);
@@ -114,7 +114,7 @@ router.post("/updateProfileInfo",async (req,res)=>{
 		const {dob, gender, name,type, sales,id}=req.body;
 		const buyer=await Buyer.findByIdAndUpdate({_id:id},{
 			"$set":{
-				dob, gender, name
+				dob, gender, name, phone
 			}
 		}, options);
 		res.status(200).json(buyer);

@@ -126,6 +126,36 @@ router.post("/updateProfileInfo",async (req,res)=>{
 
 
 
+router.post("/updateProfileImage",async (req,res)=>{
+	try{
+		const {profile, id}=req.body;
+		const bufferInner = Buffer.from(
+			profile.replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
+			'base64'
+			);
+	
+			 const imagePathInner = `${Date.now()}-${Math.round(
+				Math.random() * 1e9
+			)}.png`;
+			const jimpResInner=await Jimp.read(bufferInner);
+	
+			jimpResInner.resize(400, Jimp.AUTO).write(path.resolve(__dirname, `../images/${imagePathInner}`));
+	
+			   const avatar=`/images/${imagePathInner}`;
+			   const buyer=await Buyer.findByIdAndUpdate({_id:id},{
+				"$set":{
+					profile:avatar
+				}
+			}, options);
+			res.status(200).json(buyer);
+	}catch(e){
+		console.log(e)
+	}
+	
+})
+
+
+
 router.post("/update",async (req,res)=>{
 	try{
 		console.log(req.body);

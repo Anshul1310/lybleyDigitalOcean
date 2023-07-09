@@ -118,6 +118,7 @@ router.post("/updateProfileInfo",async (req,res)=>{
 			}
 		}, options);
 		res.status(200).json(buyer);
+
 	}catch(er){ 
 		res.status(404).json({msg:"Something went wrong"})
 		console.log(er);
@@ -129,6 +130,7 @@ router.post("/updateProfileInfo",async (req,res)=>{
 router.post("/updateProfileImage",async (req,res)=>{
 	try{
 		const {profile, id}=req.body;
+		console.log(req.body);
 		const bufferInner = Buffer.from(
 			profile.replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
 			'base64'

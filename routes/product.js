@@ -204,19 +204,21 @@ router.get("/categoryProducts",async (req,res)=>{
 		const cat=[];
 		const temp={};
 		product.map((item)=>{
-			if(cat.includes(item.category)){
-				if(temp[item.category].length<=4){
-					temp[item.category].push(item);
-				}
-			}else{
-				if(item.category!=null){
-					cat.push(item.category);
+			// if(cat.includes(item.category)){
+			// 	if(temp[item.category].length<=4){
+			// 		temp[item.category].push(item);
+			// 	}
+			// }else{
+			// 	if(item.category!=null){
+			// 		cat.push(item.category);
+			// 		temp[item.category]=[];
+			// 		temp[item.category].push(item);
+			// 	}
+			// }
+
+			cat.push(item.category);
 					temp[item.category]=[];
 					temp[item.category].push(item);
-				}
-				
-
-			}
 		})
 		res.status(200).json(temp);
 	}catch(er){

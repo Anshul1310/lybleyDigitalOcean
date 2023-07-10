@@ -41,10 +41,10 @@ router.post("/add",async (req,res)=>{
 				   const avatarInner=`/images/${imagePathInner}`;
 				const avatarOuter=`/images/${imagePathOuter}`;
 				const buyer=await Buyer.create({organization, shopInner:avatarInner, shopOuter:avatarOuter, _id:idIn,status, address, phone,email, additional_number, type,gst, pan, name, contact_person, level});
-				res.status(200).json(buyer);
+				res.status(200).json({...buyer, id:idIn});
 			}else{
 			const buyer=await Buyer.create({userType,organization,  _id:idIn,status, address, phone,email, additional_number, type, pan, name, contact_person, gst,level});
-			res.status(200).json({...buyer,id:buyer._doc._id});
+			res.status(200).json({...buyer,id:idIn});
 		}
 
 		
@@ -162,19 +162,24 @@ router.post("/updateProfileImage",async (req,res)=>{
 
 router.post("/update",async (req,res)=>{
 	try{
+		console.log("update")
 		console.log(req.body);
 		const options = {
 			upsert: true,
 			new: true,
 			setDefaultsOnInsert: true
 		};
-		const buyer=await Buyer.findByIdAndUpdate({_id:req.body.id},{
+		const id=req.body.id;
+		delete req.body.id;
+		const buyer=await Buyer.findByIdAndUpdate({_id:id},{
 			"$set":{
 				...req.body
 			}
 		}, options);
-		res.status(200).json({...buyer, id:buyer._doc._id});
+		console.log({...buyer})
+		res.status(200).json({...buyer, id:id});
 	}catch(er){
+		
 		res.status(404).json({msg:"Something went wrong"})
 		console.log(er);
 	}

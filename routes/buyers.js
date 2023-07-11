@@ -42,7 +42,7 @@ router.post("/add",async (req,res)=>{
 				const avatarOuter=`/images/${imagePathOuter}`;
 				const buyer=await Buyer.create({organization, shopInner:avatarInner, shopOuter:avatarOuter, _id:idIn,status, address, phone,email, additional_number, type,gst, pan, name, contact_person, level});
 				console.log("after in if"+idIn)
-
+				console.log({...buyer, idIn})
 				res.status(200).json({...buyer, id:idIn});
 			}else{
 			const buyer=await Buyer.create({userType,organization,  _id:idIn,status, address, phone,email, additional_number, type, pan, name, contact_person, gst,level});

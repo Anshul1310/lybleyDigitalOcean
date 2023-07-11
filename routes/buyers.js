@@ -5,7 +5,7 @@ const Jimp=require("jimp");
 const path=require("path");
 
 router.post("/add",async (req,res)=>{
-	console.log(req.body)
+	
 	try{
 		const {organization, address,userType, phone,email,shopInner, shopOuter,  additional_number,status, type,gst, pan, name, contact_person, level}=req.body;
 		const obj=await Settings.findOne();
@@ -14,7 +14,7 @@ router.post("/add",async (req,res)=>{
 				buyerIndex:number+1
 			})
 		const idIn="WB"+number;
-		
+		console.log("before if"+idIn)
 		if(shopInner!==undefined && shopOuter!==undefined){
 			const bufferInner = Buffer.from(
 				shopInner.replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
@@ -41,9 +41,13 @@ router.post("/add",async (req,res)=>{
 				   const avatarInner=`/images/${imagePathInner}`;
 				const avatarOuter=`/images/${imagePathOuter}`;
 				const buyer=await Buyer.create({organization, shopInner:avatarInner, shopOuter:avatarOuter, _id:idIn,status, address, phone,email, additional_number, type,gst, pan, name, contact_person, level});
+				console.log("after in if"+idIn)
+
 				res.status(200).json({...buyer, id:idIn});
 			}else{
 			const buyer=await Buyer.create({userType,organization,  _id:idIn,status, address, phone,email, additional_number, type, pan, name, contact_person, gst,level});
+			console.log("after in else"+idIn)
+
 			res.status(200).json({...buyer,id:idIn});
 		}
 
@@ -53,8 +57,9 @@ router.post("/add",async (req,res)=>{
 		
 		
 	}catch(er){
-		res.status(404).json("Something went wrong")
 		console.log(er);
+		res.status(400).json("Something went wrong")
+		
 	}
 })
 router.get("/all",async (req,res)=>{

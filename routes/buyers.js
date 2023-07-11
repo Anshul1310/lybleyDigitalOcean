@@ -7,6 +7,8 @@ const path=require("path");
 router.post("/add",async (req,res)=>{
 	
 	try{
+		console.log("new log");
+		console.log(req.body);
 		const {organization, address,userType, phone,email,shopInner, shopOuter,  additional_number,status, type,gst, pan, name, contact_person, level}=req.body;
 		const obj=await Settings.findOne();
 			const number=obj.buyerIndex;
@@ -42,7 +44,7 @@ router.post("/add",async (req,res)=>{
 				const avatarOuter=`/images/${imagePathOuter}`;
 				const buyer=await Buyer.create({organization, shopInner:avatarInner, shopOuter:avatarOuter, _id:idIn,status, address, phone,email, additional_number, type,gst, pan, name, contact_person, level});
 				console.log("after in if"+idIn)
-				console.log({...buyer, idIn})
+				console.log({...buyer._doc, idIn})
 				res.status(200).json({...buyer._doc, id:idIn});
 			}else{
 			const buyer=await Buyer.create({userType,organization,  _id:idIn,status, address, phone,email, additional_number, type, pan, name, contact_person, gst,level});

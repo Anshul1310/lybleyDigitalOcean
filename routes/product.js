@@ -244,13 +244,13 @@ router.get("/brand",async (req,res)=>{
 			let map=jk[i];
 			product.forEach(async (item)=>{
 				if(map==item.brand){
-					if(((item.slashedPrice-item.customerPrice)/item.slashedPrice)>maxDiscount){
-						maxDiscount=((item.slashedPrice-item.customerPrice)/item.slashedPrice);
+					if((((item.slashedPrice-item.customerPrice)/item.slashedPrice)*100)>maxDiscount){
+						maxDiscount=(((item.slashedPrice-item.customerPrice)/item.slashedPrice)*100);
 					}
 				}
 				
 			})
-			temp[map]=maxDiscount;
+			temp[map]=ParseFloat(maxDiscount+"",2);
 			maxDiscount=0;
 		}
 		
@@ -261,6 +261,14 @@ router.get("/brand",async (req,res)=>{
 		console.log(e);
 	}
 })
+
+
+function ParseFloat(str,val) {
+    str = str.toString();
+    str = str.slice(0, (str.indexOf(".")) + val + 1);
+    return Number(str);  
+}
+
 router.get("/search/:query",async (req,res)=>{
 	var query=req.params.query.split("&")[0];
 	var page=req.params.query.split("&")[1];

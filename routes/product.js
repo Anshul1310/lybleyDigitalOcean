@@ -241,6 +241,7 @@ router.get("/brand",async (req,res)=>{
 
 		for(let i=0;i<jk.length;i++){
 			let maxDiscount=0;
+			let map=jk[i];
 			product.forEach(async (item)=>{
 				if(map==item.brand){
 					if(((item.slashedPrice-item.customerPrice)/item.slashedPrice)>maxDiscount){

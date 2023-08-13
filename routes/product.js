@@ -250,7 +250,7 @@ router.get("/brand",async (req,res)=>{
 				}
 				
 			})
-			temp[map].push(maxDiscount);
+			temp[map]=maxDiscount;
 			maxDiscount=0;
 		}
 		

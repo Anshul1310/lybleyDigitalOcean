@@ -249,7 +249,7 @@ router.get("/brand",async (req,res)=>{
 			})
 			temp.add({map:maxDiscount})
 		})
-		res.status(200).json(jk)
+		res.status(200).json(temp)
 		
 	}catch(e){
 		res.status(400).json({msg:"error"});

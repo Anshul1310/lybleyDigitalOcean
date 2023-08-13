@@ -237,7 +237,9 @@ router.get("/brand",async (req,res)=>{
 		for(let i=0;i<mySet.size;i++){
 			jk[i]=Array.from(mySet)[i];
 		}
+		console.log(jk);
 		jk.map((map)=>{
+
 			let maxDiscount=0;
 			product.forEach(async (item)=>{
 				if(map==item.brand){

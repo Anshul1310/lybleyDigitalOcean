@@ -247,7 +247,7 @@ router.get("/brand",async (req,res)=>{
 				}
 				
 			})
-			temp.push({map:maxDiscount})
+			temp[map].push(maxDiscount);
 		})
 		res.status(200).json(temp)
 		

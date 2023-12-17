@@ -25,18 +25,19 @@ const store=require("./routes/store");
 
 const admin=require("./routes/admin");
 
-const MONGO_USERNAME = 'anshul';
-const MONGO_PASSWORD = 'anshul10';
-const MONGO_HOSTNAME = 'localhost';
+const MONGO_USERNAME = 'doadmin';
+const MONGO_PASSWORD = 'H97GnehW604852jz';
+const MONGO_HOSTNAME = 'mongodb+srv://db-mongodb-blr1-01506-4d5e0622.mongo.ondigitalocean.com';
 const MONGO_PORT = '5321';
-const MONGO_DB = 'hi';
+const MONGO_DB = 'admin';
 
-mongoose.connect("mongodb://0.0.0.0:27017/ecom_app",{
+mongoose.connect("mongodb+srv://doadmin:H97GnehW604852jz@db-mongodb-blr1-01506-4d5e0622.mongo.ondigitalocean.com/admin?tls=true&authSource=admin",{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then((data)=>{
 	console.log("dsd")
 });
+
 
 const corsOption = {
     origin: ['http://localhost:3000'],

@@ -35,7 +35,7 @@ mongoose.connect("mongodb+srv://doadmin:H97GnehW604852jz@db-mongodb-blr1-01506-4
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then((data)=>{
-	console.log("dsd")
+	console.log(data)
 });
 
 

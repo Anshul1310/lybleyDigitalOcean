@@ -26,9 +26,9 @@ const store=require("./routes/store");
 const admin=require("./routes/admin");
 
 const MONGO_USERNAME = 'doadmin';
-const MONGO_PASSWORD = 'H97GnehW604852jz';
-const MONGO_HOSTNAME = 'mongodb+srv://db-mongodb-blr1-01506-4d5e0622.mongo.ondigitalocean.com';
-const MONGO_PORT = '5321';
+const MONGO_PASSWORD = 'n53q0aQ9e27K6r4O';
+const MONGO_HOSTNAME = 'mongodb+srv://lybley-db-2ae7161e.mongo.ondigitalocean.com';
+const MONGO_PORT = '27017';
 const MONGO_DB = 'admin';
 
 mongoose.connect("mongodb+srv://doadmin:H97GnehW604852jz@db-mongodb-blr1-01506-4d5e0622.mongo.ondigitalocean.com/admin?tls=true&authSource=admin",{

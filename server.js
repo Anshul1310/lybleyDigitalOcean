@@ -31,13 +31,16 @@ const MONGO_HOSTNAME = 'mongodb+srv://lybley-db-2ae7161e.mongo.ondigitalocean.co
 const MONGO_PORT = '27017';
 const MONGO_DB = 'admin';
 
-mongoose.connect("mongodb+srv://doadmin:H97GnehW604852jz@db-mongodb-blr1-01506-4d5e0622.mongo.ondigitalocean.com/admin?tls=true&authSource=admin",{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then((data)=>{
-	console.log(data)
-});
+// mongoose.connect("mongodb+srv://doadmin:H97GnehW604852jz@db-mongodb-blr1-01506-4d5e0622.mongo.ondigitalocean.com/admin?tls=true&authSource=admin",{
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// }).then((data)=>{
+// 	console.log(data)
+// });
 
+mongoose.connect("mongodb+srv://doadmin:n53q0aQ9e27K6r4O@lybley-db-2ae7161e.mongo.ondigitalocean.com/admin?tls=true&authSource=admin").then((data)=>{
+    console.log(data);
+});
 
 const corsOption = {
     origin: ['http://localhost:3000'],
